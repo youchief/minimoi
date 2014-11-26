@@ -15,10 +15,11 @@ class CardWithBarCode extends FPDF {
 
     var $document_width = 86;//54;
     var $document_height = 54;//86;
+    var $text = '';
     var $bgPath;
     var $fontPath;
     
-    function CardWithBarCode($bgPath, $fontPath) {
+    function CardWithBarCode($bgPath, $fontPath ) {
         $this->FPDF('P','mm',array( $this->document_width, $this->document_height ));
         $this->bgPath = $bgPath;
         $this->fontPath = $fontPath;
